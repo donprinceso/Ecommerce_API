@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-//use App\Model\Reviews;
+use App\Model\Review;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Resources\ReviewResource;
@@ -11,12 +11,12 @@ class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function index(Product $product)
+    public function index($id,Product $product)
     {
-       return ReviewResource::collection($product->reviews);
+       return ReviewResource::collection($product->find($id)->reviews);
     }
 
     /**
@@ -43,10 +43,10 @@ class ReviewController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Reviews  $reviews
+     * @param  \App\Model\Review  $reviews
      * @return \Illuminate\Http\Response
      */
-    public function show(Reviews $reviews)
+    public function show(Review $reviews)
     {
         //
     }
@@ -57,7 +57,7 @@ class ReviewController extends Controller
      * @param  \App\Model\Reviews  $reviews
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reviews $reviews)
+    public function edit(Review $reviews)
     {
         //
     }
@@ -66,10 +66,10 @@ class ReviewController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Reviews  $reviews
+     * @param  \App\Model\Review  $reviews
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reviews $reviews)
+    public function update(Request $request, Review $reviews)
     {
         //
     }
@@ -77,10 +77,10 @@ class ReviewController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Reviews  $reviews
+     * @param  \App\Model\Review  $reviews
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reviews $reviews)
+    public function destroy(Review $reviews)
     {
         //
     }

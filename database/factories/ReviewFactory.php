@@ -2,7 +2,7 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Model\Reviews;
+use App\Model\Review;
 use Faker\Generator as Faker;
 use App\Model\Product;
 

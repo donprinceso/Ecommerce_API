@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Prophecy\Comparator\Factory;
 use App\Model\Product;
-use App\Model\Reviews;
+use App\Model\Review;
 
 class DatabaseSeeder extends Seeder
 {

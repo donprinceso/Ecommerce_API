@@ -8,6 +8,6 @@ class Review extends Model
 {
     public function product()
     {
-        return $this->hasMany('App\Model\Product');
+        return $this->belongsTo('App\Model\Product');
     }
 }
