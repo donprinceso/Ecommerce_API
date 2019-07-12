@@ -9,4 +9,6 @@ class Product extends Model
    {
        return $this->hasMany("App\Model\Review");
    }
+
+   protected $fillable = ['name','detail','stock','price','discount'];
 }
