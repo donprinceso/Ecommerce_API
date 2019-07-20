@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Prophecy\Comparator\Factory;
 use App\Model\Product;
 use App\Model\Review;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(User::class,5)->create();
         factory(Product::class,40)->create();
         factory(Review::class,200)->create();
     }
